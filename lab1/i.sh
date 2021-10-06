@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ $1 -le $3 && $2 -le $3 ]]
+if (( $(echo "$1 <= $2" |bc -l) && $(echo "$2 <= $3" |bc -l) ))
 then echo $3
-elif [[ $1 -le $2 && $3 -le $2 ]]
+elif (( $(echo "$1 <= $2" |bc -l) && $(echo "$3 <= $2" |bc -l) ))
 then echo $2
 else echo $1
 fi
