@@ -1,0 +1,2 @@
+root         806  0.0  0.1  67420  1952 ?        S<sl 11:29   0:00 /sbin/auditd
+rngd         844  0.0  0.3 160228  6500 ?        Ssl  11:29   0:04 /sbin/rngd -f --fill-watermark=0

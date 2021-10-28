@@ -1,4 +1,5 @@
 #!/bin/bash
 
-ps a u | awk 'FNR>1 && $1=="user"{print $2":"$11}'| wc -l > i.txt
-ps a u | awk 'FNR>1 && $1=="user"{print $2":"$11}'>> i.txt
+VAR=$(ps -u user axh -o pid,command)
+echo "${VAR}"| wc -l > i.txt
+echo "${VAR}">> i.txt

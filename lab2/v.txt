@@ -1,5 +1,6 @@
 ProcessID=1 : Parent_ProcessID=0 : Average_Running_Time=.43384
 ProcessID=2 : Parent_ProcessID=0 : Average_Running_Time=.00833
+Average_Running_Children_of_ParentID=0 is .22108
 ProcessID=1126 : Parent_ProcessID=1 : Average_Running_Time=.45768
 ProcessID=1129 : Parent_ProcessID=1 : Average_Running_Time=2.52041
 ProcessID=1420 : Parent_ProcessID=1 : Average_Running_Time=.77092
@@ -23,6 +24,7 @@ ProcessID=875 : Parent_ProcessID=1 : Average_Running_Time=.92415
 ProcessID=892 : Parent_ProcessID=1 : Average_Running_Time=.08850
 ProcessID=906 : Parent_ProcessID=1 : Average_Running_Time=.29996
 ProcessID=908 : Parent_ProcessID=1 : Average_Running_Time=.54724
+Average_Running_Children_of_ParentID=1 is .51002
 ProcessID=10 : Parent_ProcessID=2 : Average_Running_Time=.00172
 ProcessID=11 : Parent_ProcessID=2 : Average_Running_Time=0
 ProcessID=12 : Parent_ProcessID=2 : Average_Running_Time=.00137
@@ -89,11 +91,18 @@ ProcessID=812 : Parent_ProcessID=2 : Average_Running_Time=.00196
 ProcessID=8429 : Parent_ProcessID=2 : Average_Running_Time=.07140
 ProcessID=8 : Parent_ProcessID=2 : Average_Running_Time=0
 ProcessID=9 : Parent_ProcessID=2 : Average_Running_Time=.03144
+Average_Running_Children_of_ParentID=2 is .07675
 ProcessID=863 : Parent_ProcessID=839 : Average_Running_Time=.05868
+Average_Running_Children_of_ParentID=839 is .05868
 ProcessID=873 : Parent_ProcessID=842 : Average_Running_Time=.24106
 ProcessID=874 : Parent_ProcessID=842 : Average_Running_Time=.11004
+Average_Running_Children_of_ParentID=842 is .17555
 ProcessID=1438 : Parent_ProcessID=1420 : Average_Running_Time=.31921
+Average_Running_Children_of_ParentID=1420 is .31921
 ProcessID=1432 : Parent_ProcessID=1427 : Average_Running_Time=.07058
+Average_Running_Children_of_ParentID=1427 is .07058
 ProcessID=11981 : Parent_ProcessID=1438 : Average_Running_Time=3.98609
+Average_Running_Children_of_ParentID=1438 is 3.98609
 ProcessID=11982 : Parent_ProcessID=11981 : Average_Running_Time=.08177
 ProcessID=11983 : Parent_ProcessID=11981 : Average_Running_Time=.45641
+Average_Running_Children_of_ParentID=11981 is .26909
