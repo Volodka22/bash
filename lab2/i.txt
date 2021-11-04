@@ -1,99 +1,97 @@
-98
-      1 /usr/lib/systemd/systemd --switched-root --system --deserialize 16
-      2 [kthreadd]
-      3 [rcu_gp]
-      4 [rcu_par_gp]
-      6 [kworker/0:0H-kblockd]
-      8 [mm_percpu_wq]
-      9 [ksoftirqd/0]
-     10 [rcu_sched]
-     11 [migration/0]
-     12 [watchdog/0]
-     13 [cpuhp/0]
-     15 [kdevtmpfs]
-     16 [netns]
-     17 [kauditd]
-     18 [khungtaskd]
-     19 [oom_reaper]
-     20 [writeback]
-     21 [kcompactd0]
-     22 [ksmd]
-     23 [khugepaged]
-     24 [crypto]
-     25 [kintegrityd]
-     26 [kblockd]
-     27 [tpm_dev_wq]
-     28 [md]
-     29 [edac-poller]
-     30 [watchdogd]
-     33 [kworker/u2:1-flush-253:2]
-     47 [kswapd0]
-    140 [kthrotld]
-    141 [acpi_thermal_pm]
-    142 [kmpath_rdacd]
-    143 [kaluad]
-    144 [ipv6_addrconf]
-    146 [kstrp]
-    444 [ata_sff]
-    445 [scsi_eh_0]
-    446 [scsi_tmf_0]
-    447 [scsi_eh_1]
-    448 [scsi_tmf_1]
-    449 [kworker/u2:2-events_unbound]
-    450 [scsi_eh_2]
-    451 [scsi_tmf_2]
-    457 [kworker/0:1H-kblockd]
-    514 [kdmflush]
-    524 [kdmflush]
-    562 [jbd2/dm-0-8]
-    563 [ext4-rsv-conver]
-    653 /usr/lib/systemd/systemd-journald
-    685 /usr/lib/systemd/systemd-udevd
-    728 [irq/18-vmwgfx]
-    729 [ttm_swap]
-    734 [kdmflush]
-    764 [xfsalloc]
-    767 [xfs_mru_cache]
-    768 [xfs-buf/dm-2]
-    771 [xfs-conv/dm-2]
-    772 [xfs-cil/dm-2]
-    773 [xfs-reclaim/dm-]
-    774 [xfs-log/dm-2]
-    775 [xfs-eofblocks/d]
-    776 [xfsaild/dm-2]
-    781 [jbd2/sda1-8]
-    782 [ext4-rsv-conver]
-    805 /usr/bin/rpcbind -w -f
-    807 /sbin/auditd
-    810 [rpciod]
-    811 [kworker/u3:0]
-    812 [xprtiod]
-    837 /usr/sbin/ModemManager
-    838 /usr/sbin/mcelog --ignorenodev --daemon --foreground
-    839 avahi-daemon: running [linux.local]
-    841 /usr/bin/lsmd -d
-    842 /usr/sbin/sssd -i --logger=files
-    843 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-    848 /usr/sbin/smartd -n -q never
-    849 /usr/lib/polkit-1/polkitd --no-debug
-    850 /sbin/rngd -f --fill-watermark=0
-    852 /usr/sbin/gssproxy -D
-    863 avahi-daemon: chroot helper
-    872 /usr/libexec/platform-python -s /usr/sbin/firewalld --nofork --nopid
-    873 /usr/libexec/sssd/sssd_be --domain implicit_files --uid 0 --gid 0 --logger=files
-    874 /usr/libexec/sssd/sssd_nss --uid 0 --gid 0 --logger=files
-    875 /usr/lib/systemd/systemd-logind
-    892 /usr/sbin/NetworkManager --no-daemon
-    906 /usr/sbin/sshd -D -oCiphers=aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes128-ctr,aes128-cbc -oMACs=hmac-sha2-256-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha1,umac-128@openssh.com,hmac-sha2-512 -oGSSAPIKexAlgorithms=gss-gex-sha1-,gss-group14-sha1- -oKexAlgorithms=curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1 -oHostKeyAlgorithms=rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp384-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,ssh-rsa,ssh-rsa-cert-v01@openssh.com -oPubkeyAcceptedKeyTypes=rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp384-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,ssh-rsa,ssh-rsa-cert-v01@openssh.com -oCASignatureAlgorithms=rsa-sha2-256,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,rsa-sha2-512,ecdsa-sha2-nistp521,ssh-ed25519,ssh-rsa
-    908 /usr/libexec/platform-python -Es /usr/sbin/tuned -l -P
-   1126 /usr/sbin/atd -f
-   1129 /usr/sbin/crond -n
-   1420 login -- root
-   1427 /usr/lib/systemd/systemd --user
-   1432 (sd-pam)
-   1438 -bash
-  34029 [kworker/0:2-events]
-  35932 [kworker/0:1-ata_sff]
-  36032 [kworker/0:0-ata_sff]
-  36040 bash i.sh
-  36041 ps -u user axh -o pid,command
+root           1  0.2  0.7 179200 13532 ?        Ss   18:22   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize 16
+root           2  0.0  0.0      0     0 ?        S    18:22   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   18:22   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   18:22   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I    18:22   0:00 [kworker/0:0-memcg_kmem_cache]
+root           6  0.0  0.0      0     0 ?        I<   18:22   0:00 [kworker/0:0H-kblockd]
+root           8  0.0  0.0      0     0 ?        I<   18:22   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    18:22   0:00 [ksoftirqd/0]
+root          10  0.0  0.0      0     0 ?        I    18:22   0:00 [rcu_sched]
+root          11  0.0  0.0      0     0 ?        S    18:22   0:00 [migration/0]
+root          12  0.0  0.0      0     0 ?        S    18:22   0:00 [watchdog/0]
+root          13  0.0  0.0      0     0 ?        S    18:22   0:00 [cpuhp/0]
+root          15  0.0  0.0      0     0 ?        S    18:22   0:00 [kdevtmpfs]
+root          16  0.0  0.0      0     0 ?        I<   18:22   0:00 [netns]
+root          17  0.0  0.0      0     0 ?        S    18:22   0:00 [kauditd]
+root          18  0.0  0.0      0     0 ?        S    18:22   0:00 [khungtaskd]
+root          19  0.0  0.0      0     0 ?        S    18:22   0:00 [oom_reaper]
+root          20  0.0  0.0      0     0 ?        I<   18:22   0:00 [writeback]
+root          21  0.0  0.0      0     0 ?        S    18:22   0:00 [kcompactd0]
+root          22  0.0  0.0      0     0 ?        SN   18:22   0:00 [ksmd]
+root          23  0.0  0.0      0     0 ?        SN   18:22   0:00 [khugepaged]
+root          24  0.0  0.0      0     0 ?        I<   18:22   0:00 [crypto]
+root          25  0.0  0.0      0     0 ?        I<   18:22   0:00 [kintegrityd]
+root          26  0.0  0.0      0     0 ?        I<   18:22   0:00 [kblockd]
+root          27  0.0  0.0      0     0 ?        I<   18:22   0:00 [tpm_dev_wq]
+root          28  0.0  0.0      0     0 ?        I<   18:22   0:00 [md]
+root          29  0.0  0.0      0     0 ?        I<   18:22   0:00 [edac-poller]
+root          30  0.0  0.0      0     0 ?        S    18:22   0:00 [watchdogd]
+root          33  0.0  0.0      0     0 ?        I    18:22   0:00 [kworker/u2:1-events_unbound]
+root          47  0.0  0.0      0     0 ?        S    18:22   0:00 [kswapd0]
+root         140  0.0  0.0      0     0 ?        I<   18:22   0:00 [kthrotld]
+root         141  0.0  0.0      0     0 ?        I<   18:22   0:00 [acpi_thermal_pm]
+root         142  0.0  0.0      0     0 ?        I<   18:22   0:00 [kmpath_rdacd]
+root         143  0.0  0.0      0     0 ?        I<   18:22   0:00 [kaluad]
+root         144  0.0  0.0      0     0 ?        I<   18:22   0:00 [ipv6_addrconf]
+root         146  0.0  0.0      0     0 ?        I<   18:22   0:00 [kstrp]
+root         456  0.0  0.0      0     0 ?        I<   18:22   0:00 [ata_sff]
+root         457  0.0  0.0      0     0 ?        S    18:22   0:00 [scsi_eh_0]
+root         458  0.0  0.0      0     0 ?        I<   18:22   0:00 [scsi_tmf_0]
+root         459  0.0  0.0      0     0 ?        S    18:22   0:00 [scsi_eh_1]
+root         460  0.0  0.0      0     0 ?        I<   18:22   0:00 [scsi_tmf_1]
+root         461  0.0  0.0      0     0 ?        I    18:22   0:00 [kworker/u2:2-events_unbound]
+root         462  0.0  0.0      0     0 ?        S    18:22   0:00 [scsi_eh_2]
+root         463  0.0  0.0      0     0 ?        I<   18:22   0:00 [scsi_tmf_2]
+root         469  0.0  0.0      0     0 ?        I<   18:22   0:00 [kworker/0:1H-kblockd]
+root         527  0.0  0.0      0     0 ?        I<   18:22   0:00 [kdmflush]
+root         536  0.0  0.0      0     0 ?        I<   18:22   0:00 [kdmflush]
+root         571  0.0  0.0      0     0 ?        S    18:22   0:00 [jbd2/dm-0-8]
+root         572  0.0  0.0      0     0 ?        I<   18:22   0:00 [ext4-rsv-conver]
+root         662  0.0  0.4  91972  8588 ?        Ss   18:22   0:00 /usr/lib/systemd/systemd-journald
+root         679  0.0  0.0      0     0 ?        I    18:22   0:00 [kworker/0:5-events]
+root         680  0.0  0.0      0     0 ?        I    18:22   0:00 [kworker/0:6-ata_sff]
+root         694  0.0  0.6 109896 11360 ?        Ss   18:22   0:00 /usr/lib/systemd/systemd-udevd
+root         741  0.0  0.0      0     0 ?        I<   18:22   0:00 [kdmflush]
+root         744  0.0  0.0      0     0 ?        S    18:22   0:00 [irq/18-vmwgfx]
+root         745  0.0  0.0      0     0 ?        I<   18:22   0:00 [ttm_swap]
+root         775  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfsalloc]
+root         776  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfs_mru_cache]
+root         779  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfs-buf/dm-2]
+root         780  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfs-conv/dm-2]
+root         781  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfs-cil/dm-2]
+root         782  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfs-reclaim/dm-]
+root         783  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfs-log/dm-2]
+root         784  0.0  0.0      0     0 ?        I<   18:22   0:00 [xfs-eofblocks/d]
+root         785  0.0  0.0      0     0 ?        S    18:22   0:00 [xfsaild/dm-2]
+root         790  0.0  0.0      0     0 ?        S    18:22   0:00 [jbd2/sda1-8]
+root         791  0.0  0.0      0     0 ?        I<   18:22   0:00 [ext4-rsv-conver]
+rpc          815  0.0  0.3  67120  5616 ?        Ss   18:22   0:00 /usr/bin/rpcbind -w -f
+root         817  0.0  0.0      0     0 ?        I<   18:22   0:00 [rpciod]
+root         818  0.0  0.0      0     0 ?        I<   18:22   0:00 [kworker/u3:0]
+root         819  0.0  0.0      0     0 ?        I<   18:22   0:00 [xprtiod]
+root         822  0.0  0.1  67420  1972 ?        S<sl 18:22   0:00 /sbin/auditd
+avahi        844  0.0  0.2  82748  5220 ?        Ss   18:22   0:00 avahi-daemon: running [linux.local]
+root         845  0.0  0.6 462752 12520 ?        Ssl  18:22   0:00 /usr/sbin/ModemManager
+dbus         846  0.0  0.3  89260  5988 ?        Ssl  18:22   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         847  0.0  0.7 422208 14072 ?        Ss   18:22   0:00 /usr/sbin/sssd -i --logger=files
+libstor+     849  0.0  0.1  18872  2044 ?        Ss   18:22   0:00 /usr/bin/lsmd -d
+root         851  0.0  0.1  17408  2136 ?        Ss   18:22   0:00 /usr/sbin/mcelog --ignorenodev --daemon --foreground
+polkitd      852  0.0  1.3 1626880 24640 ?       Ssl  18:22   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root         854  0.0  0.2  26368  4832 ?        Ss   18:22   0:00 /usr/sbin/smartd -n -q never
+root         860  0.0  0.2 311544  3844 ?        Ssl  18:22   0:00 /usr/sbin/gssproxy -D
+avahi        871  0.0  0.0  82620   432 ?        S    18:22   0:00 avahi-daemon: chroot helper
+rngd         872  0.9  0.3 160228  6496 ?        Ssl  18:22   0:04 /sbin/rngd -f --fill-watermark=0
+root         879  0.0  0.7 428812 14504 ?        S    18:22   0:00 /usr/libexec/sssd/sssd_be --domain implicit_files --uid 0 --gid 0 --logger=files
+root         882  0.1  2.1 498720 39944 ?        Ssl  18:22   0:00 /usr/libexec/platform-python -s /usr/sbin/firewalld --nofork --nopid
+root         883  0.0  2.0 430980 38060 ?        S    18:22   0:00 /usr/libexec/sssd/sssd_nss --uid 0 --gid 0 --logger=files
+root         884  0.0  0.5  97824  9560 ?        Ss   18:22   0:00 /usr/lib/systemd/systemd-logind
+root         897  0.0  0.9 680700 18324 ?        Ssl  18:22   0:00 /usr/sbin/NetworkManager --no-daemon
+root         911  0.0  1.7 635064 33540 ?        Ssl  18:22   0:00 /usr/libexec/platform-python -Es /usr/sbin/tuned -l -P
+root         914  0.0  0.3  92968  6868 ?        Ss   18:22   0:00 /usr/sbin/sshd -D -oCiphers=aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes128-ctr,aes128-cbc -oMACs=hmac-sha2-256-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha1,umac-128@openssh.com,hmac-sha2-512 -oGSSAPIKexAlgorithms=gss-gex-sha1-,gss-group14-sha1- -oKexAlgorithms=curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1 -oHostKeyAlgorithms=rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp384-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,ssh-rsa,ssh-rsa-cert-v01@openssh.com -oPubkeyAcceptedKeyTypes=rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp384-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,ssh-rsa,ssh-rsa-cert-v01@openssh.com -oCASignatureAlgorithms=rsa-sha2-256,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,rsa-sha2-512,ecdsa-sha2-nistp521,ssh-ed25519,ssh-rsa
+root        1129  0.0  0.1  42624  2460 ?        Ss   18:22   0:00 /usr/sbin/atd -f
+root        1130  0.0  0.3 121676  5656 ?        Ss   18:22   0:00 login -- root
+root        1131  0.0  0.1 245852  3664 ?        Ss   18:22   0:00 /usr/sbin/crond -n
+root        1424  0.0  0.5  93752  9656 ?        Ss   18:25   0:00 /usr/lib/systemd/systemd --user
+root        1429  0.0  0.2 233664  5240 ?        S    18:25   0:00 (sd-pam)
+root        1435  0.0  0.3 236596  5628 tty1     Ss   18:25   0:00 -bash
+root        1470  0.0  0.2 267612  4028 tty1     R+   18:30   0:00 ps -u user axhu
