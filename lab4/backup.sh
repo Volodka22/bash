@@ -22,5 +22,14 @@ if [ $DIFF -ge 7 ]
 then
 	cp -r ./source ./Backup-$(date +'%Y-%m-%d')
 else
-	for file in ./source
+	last=$(date +'%Y-%m-%d' -d $last)
+	flag="false"
+	for file in ./source/*; do
+		if [[ -f ./Backup-$last/$file ]]; then
+			flag="true"
+			if [[ $(wc -c ./Backup-$last/$file) -eq $(wc ) ]]
+		else
+			cp ./source/file ./Backup-$last/$file
+		fi
+	done
 fi
