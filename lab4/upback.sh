@@ -10,15 +10,18 @@ last=1
 
 while read line;
 do
-	it_data=$(echo $line | sed -e "s/^Backup-//")
-	cur=$(date +%s -d $it_data)
-	if [ $last -lt $cur ]
+	if ! [ -z $line ]
 	then
-		last=$cur
+		it_data=$(echo $line | sed -e "s/^Backup-//")
+		cur=$(date +%s -d $it_data)
+		if [ $last -lt $cur ]
+		then
+			last=$cur
+		fi
 	fi
 done <<<$(ls -d Backup-* 2> /dev/null)
 
-if [[ last == "1" ]]
+if [[ $last == "1" ]]
 then
 	echo "Backup don't found"
 	exit

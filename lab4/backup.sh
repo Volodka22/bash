@@ -8,14 +8,18 @@ cd $HOME_DIR
 
 while read line;
 do
-	it_data=$(echo $line | sed -e "s/^Backup-//")
-	cur=$(date +%s -d $it_data)
-	if [ $last -lt $cur ]
+	if ! [ -z $line ]
 	then
-		last=$cur
+		it_data=$(echo $line | sed -e "s/^Backup-//")
+		cur=$(date +'%s' -d $it_data)
+		if [ $last -lt $cur ]
+		then
+			last=$cur
+		fi
 	fi
 done <<<$(ls -d Backup-* 2> /dev/null)
-let DIFF=($(date +%s)-$last)/86400
+
+let DIFF=($(date +'%s')-$last)/86400
 
 REPORT=""
 
@@ -40,7 +44,7 @@ else
 			then
 				mv ./Backup-$last/$name ./Backup-$last/$name.$(date +"%Y-%m-%d")
 				cp $file ./Backup-$last/$name
-				UPDATE="$UPDATE ./Backup-$(last)/$(name) ./Backup-$(last)/$(name).$(date +'%Y-%m-%d')"
+				UPDATE="$UPDATE ./Backup-$last/$name ./Backup-$last/$name.$(date +'%Y-%m-%d')"
 			fi
 		else
 			cp $file ./Backup-$last/$name
