@@ -4,12 +4,23 @@ HOME_DIR="/home/user"
 
 mkdir $HOME_DIR/.trash 2> /dev/null
 
+if [[ -z $1 ]] || [[ $1 =~ .*/.* ]]
+then
+	echo "Incorrect input"
+	exit
+fi
+
+if [[ ! -f $(pwd)/$1 ]]
+then
+	echo "$(pwd)/$1 file not found"
+	exit
+fi
+
 if [ ! -f $HOME_DIR/.trash/.number ]
 then
 	echo "1" > $HOME_DIR/.trash/.number
 fi
 
-cat $HOME_DIR/.trash/.number
 
 NUM=$(cat $HOME_DIR/.trash/.number)
 

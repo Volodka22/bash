@@ -7,7 +7,7 @@ do
 	name=$(echo $line | awk -F':' '{print $1}')
 	num=$(echo $line | awk -F':' '{print $2}')
 	path=$(echo $line | awk -F':' '{print $3}')
-	if [ $name == "$1" ] && [ -f $TRASH_DIR$num ]
+	if [[ $name == "$1" ]] && [[ -f $TRASH_DIR$num ]]
 	then
 		echo "untrash "$path"? (y/n)"
 		read ans
